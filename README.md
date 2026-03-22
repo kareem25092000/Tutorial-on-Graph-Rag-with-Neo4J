@@ -1,2 +1,4 @@
 # Tutorial on Graph Rag with Neo4J
-Build chatbot that takes questions and answer for user query from graph database
+- Build chatbot that takes questions and answer for user query from graph database<br/><br/>
+- The dataset that was used in this tutorial is the same that was used in GRAPH Academy which is Movie dataset but i used part of it ,but you can use any dataset on your own just add `.env` file in it :<br/>  1 - `CONNECTION_URL`  to the connection of your own database<br/>2-`USER_NAME` which is the name of the user of the database <br/>3-`PASSWORD` the user's password <br/>4-`GEMANI_KEY` your gemani api key<br/><br/>
+- I extracted the schema first then i initialized a llm object of langgraph then i created the first chain that take the user's question with the schema to generate a cypher query ,which is used to retrieve the information from the graph database ,then the result is feed to the second chain with the question to give an answer .
